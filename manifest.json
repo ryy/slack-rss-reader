@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "Slack RSS Reader",
+  "description": "Slackのチャンネルに登録しているRSSをブランクページに表示する拡張機能です",
+  "version": "1.0",
+  "chrome_url_overrides": {
+    "newtab": "src/index.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com https://ssl.google-analytics.com https://www.googletagmanager.com https://google-analytics.com; object-src 'self'; style-src 'self' https://unpkg.com https://cdn.jsdelivr.net 'unsafe-inline'"
+}
