@@ -3,7 +3,7 @@
 
 # Slack Rss Readerとは？
 - [Slack](https://slack.com/)と[SlackアプリのRSS](https://slack.com/apps/A0F81R7U7-rss)を連携させて、GoogleChromeの新規タブに記事を表示する拡張機能です。
-
+  - [Slack RSS Reader](https://chrome.google.com/webstore/detail/slack-rss-reader/mmfkogkfphmlkeildihamlilfinbpdfo?hl=ja&authuser=0)
 # 使い方
 ## 事前に用意するもの
 - RSSを配信するSlackのチャンネルID
