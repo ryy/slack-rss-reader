@@ -18,6 +18,7 @@
 | メドピア開発者ブログ                                  | https://tech.medpeer.co.jp/feed                | 
 | メルカリエンジニアリングブログ                        | https://engineering.mercari.com/blog/feed.xml/ | 
 | Quipper Product Team Blog                             | https://quipper.hatenablog.com/feed            | 
+| Rakuten Rapid API                                     | https://blog.api.rakuten.net/ja/feed/          | 
 | Stories by hokan公式アカウント on Medium              | https://medium.com/feed/@hokan_dev             | 
 | さくらのナレッジ is_page                              | https://knowledge.sakura.ad.jp/rss/            | 
 | SMARTCAMP Engineer Blog                               | https://tech.smartcamp.co.jp/feed              | 
@@ -28,5 +29,6 @@
 | TechRacho                                             | https://techracho.bpsinc.jp/feed/atom          | 
 | Timee Product Team Blog                               | https://tech.timee.co.jp/rss                   | 
 | 虎の穴開発室ブログ                                    | https://toranoana-lab.hatenablog.com/feed      | 
+| ハンズラボエンジニアブログ                            | https://www.hands-lab.com/tech/feed            | 
 | Yahoo! JAPAN Tech Blog                                | https://techblog.yahoo.co.jp/index.xml         | 
 | ZOZO Technologies TECH BLOG                           | https://techblog.zozo.com/feed                 | 
