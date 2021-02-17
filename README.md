@@ -1,3 +1,5 @@
+<a href="https://www.producthunt.com/posts/slack-rss-reader?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-slack-rss-reader" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=284860&theme=dark" alt="Slack RSS Reader - Deliver the feed to a new tab in GoogleChrome | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 # Slack Rss Reader
 <img width="1154" alt="スクリーンショット 2020-12-11 16 42 06" src="https://user-images.githubusercontent.com/13917558/101876587-f800c080-3bcf-11eb-95d7-880beff43b1e.png">
 
