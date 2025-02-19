@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Slack RSS Reader",
   "description": "Slackのチャンネルに登録しているRSSをブランクページに表示する拡張機能です",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "chrome_url_overrides": {
     "newtab": "src/index.html"
   },
