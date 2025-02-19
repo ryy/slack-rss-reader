@@ -1,30 +1,72 @@
 Vue.component('connect-form', {
-  data: function () { return {
-    token: localStorage.getItem("token"),
-    channel: localStorage.getItem("channel"),
-  }},
-  mounted() {
+  data() {
+    return {
+      token: '',
+      channel: ''
+    }
   },
-  template:
-  '<div>' +
-    '<div class="mb-4">' +
-      '<label class="block text-gray-700 text-sm font-bold mb-2" for="token">Token</label>' +
-      '<input v-model="token" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="token" type="text" placeholder="token">' +
-    '</div>' +
-    '<div class="mb-6">' +
-      '<label class="block text-gray-700 text-sm font-bold mb-2" for="channel">Channel</label>' +
-      '<input v-model="channel" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="channel" type="text" placeholder="channel">' +
-      '<p class="text-gray-700 text-xs italic"><a href="https://github.com/ryy/slack-rss-reader" target="_blank">How to connect</a></p>' +
-    '</div>' +
-    '<div class="text-right mb-6">' +
-      '<a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 text-right" @click="connect">' +
-        'Connect' +
-      '</a>' +
-    '</div>' +
-  '</div>',
   methods: {
     connect() {
       this.$emit('connect-slack', this.token, this.channel)
     }
+  },
+  render(h) {
+    return h('div', { 
+      staticClass: 'bg-gray-900 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0'
+    }, [
+      h('h2', { 
+        staticClass: 'text-white text-lg font-medium title-font mb-5'
+      }, ['Connect to Slack']),
+      h('div', { 
+        staticClass: 'relative mb-4'
+      }, [
+        h('label', {
+          staticClass: 'leading-7 text-sm text-gray-400',
+          attrs: { for: 'token' }
+        }, ['Token']),
+        h('input', {
+          staticClass: 'w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out',
+          attrs: {
+            type: 'text',
+            id: 'token',
+            name: 'token'
+          },
+          domProps: {
+            value: this.token
+          },
+          on: {
+            input: (e) => this.token = e.target.value
+          }
+        })
+      ]),
+      h('div', { 
+        staticClass: 'relative mb-4'
+      }, [
+        h('label', {
+          staticClass: 'leading-7 text-sm text-gray-400',
+          attrs: { for: 'channel' }
+        }, ['Channel']),
+        h('input', {
+          staticClass: 'w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out',
+          attrs: {
+            type: 'text',
+            id: 'channel',
+            name: 'channel'
+          },
+          domProps: {
+            value: this.channel
+          },
+          on: {
+            input: (e) => this.channel = e.target.value
+          }
+        })
+      ]),
+      h('button', {
+        staticClass: 'text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg',
+        on: {
+          click: this.connect
+        }
+      }, ['Connect'])
+    ])
   }
-});
+})

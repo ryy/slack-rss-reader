@@ -4,62 +4,18 @@
 <head>
   <meta charset="utf-8" />
   <title>New Tab</title>
-  <link href="https://unpkg.com/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href="./vendor/tailwind.min.css" rel="stylesheet">
+  <link href="./vendor/custom-forms.min.css" rel="stylesheet">
 </head>
 
 <body class="text-gray-500 body-font bg-black">
-  <div id="app">
-    <nav class="flex items-center justify-between flex-wrap bg-gray-900 p-6">
-      <div class="flex items-center flex-shrink-0 text-white mr-6">
-        <svg class="fill-current h-8 w-8 mr-2" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.29 14.646c0 .748-.607 1.354-1.354 1.354-.749 0-1.356-.606-1.356-1.354 0-.747.607-1.353 1.355-1.353.748.001 1.355.606 1.355 1.353zm-2.71-5.237v2.004c2.521.025 4.567 2.068 4.592 4.587h2.008c-.026-3.629-2.965-6.566-6.6-6.591zm0-1.404c4.407.02 7.98 3.581 7.993 7.995h2.007c-.012-5.513-4.48-9.981-10-10v2.005z"/></svg>
-        <span class="font-semibold text-sm tracking-tight">Slack RSS Reader</span>
-      </div>
-      <div class="block lg:hidden">
-        <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-        </button>
-      </div>
-      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div class="text-sm lg:flex-grow">
-        </div>
-        <div v-if="!connected">
-          <!-- <button class="modal-open bg-transparent border border-red-800 text-red-800 font-bold py-2 px-4 rounded-full">unconnected</button> -->
-          <a
-            href="#"
-            class="text-red-800 inline-block text-xs px-4 py-2 leading-none mt-4 lg:mt-0"
-            @click="openForm = !openForm"
-          >
-            unconnected
-          </a>
-        </div>
-        <div v-else>
-          <a
-            href="#"
-            class="text-green-800 inline-block text-xs px-4 py-2 leading-none mt-4 lg:mt-0"
-            @click="openForm = !openForm"
-          >
-            connected
-          </a>
-        </div>
-      </div>
-    </nav>
-    <section>
-      
-      <div class="container-lg px-10 py-10 mx-auto">
-        <connect-form @connect-slack="connect" v-show="openForm"></connect-form>
-        <div class="flex flex-wrap -m-4">
-          <article-card v-for="article in filter(articles)" v-bind:key="article.id" v-bind:article="article"></article-card>
-        </div>
-      </div>
-    </section>
-  </div>
+  <div id="app"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js"></script>
-  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-  <script src="https://unpkg.com/dayjs@1.7.7/locale/ja.js"></script>
-  <script src="https://unpkg.com/dayjs/plugin/relativeTime"></script>
+  <script src="./vendor/vue.runtime.min.js"></script>
+  <script src="./vendor/axios.min.js"></script>
+  <script src="./vendor/dayjs.min.js"></script>
+  <script src="./vendor/ja.js"></script>
+  <script src="./vendor/relativeTime.js"></script>
 
   <script src="./javascripts/dayjs_init.js"></script>
   <script src="./javascripts/filters.js"></script>
